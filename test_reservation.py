@@ -133,3 +133,7 @@ class WCGApiTest(unittest.TestCase):
         response = requests.delete(URL + f'/reservation/{random.randint(1000000000000, 9999999999999)}')
         self.assertEqual(200, response.status_code)
         self.assertEqual('cancel reservation failed: citizen ID is not registered', response.json().get('feedback'))
+
+
+if __name__ == '__main__':
+    unittest.main()
